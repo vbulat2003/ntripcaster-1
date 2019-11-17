@@ -243,7 +243,8 @@ void client_login(connection_t *con, char *expr)
 
 	write_log(LOG_DEFAULT, "Accepted client %d [%s] from [%s] on mountpoint [%s] using agent [%]. %d clients connected", con->id,
 		nullcheck_string(con->user), con_host (con), source->food.source->audiocast.mount, get_user_agent(con), info.num_clients);
-
+//ovde otvara novi thread za hvatanje GGA
+	cepture_gga(con);
 //	greet_client(con, source->food.source);
 }
 
