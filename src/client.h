@@ -98,3 +98,5 @@ ice_user_t *find_user_from_tree(usertree_t * ut, const char *name);
 
 void print_authentication_scheme();
 
+/*added for gga capture*/
+void *capture_gga(void *conarg);
